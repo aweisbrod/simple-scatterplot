@@ -35,10 +35,11 @@
 
 </script>
 
-<h1>Students who studied longer scored higher on final exam</h1>
+
 
 <!-- Svelte {#each} block -->
 <div class='chart-container' bind:clientWidth={width}>
+    <h1>Students who studied for more hours scored higher on their final exam</h1>
   <svg {width} {height} 
           on:mouseleave={() => {
             hoveredData = null;
@@ -92,6 +93,14 @@
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+  }
+
+  .chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
   }
   
 
